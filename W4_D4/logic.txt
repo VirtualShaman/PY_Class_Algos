@@ -1,0 +1,43 @@
+Consider a village with vampires and a sleeping man (who never wakes up, no matter what). // A vampire can eat the sleeping man, but after eating him, the vampire falls asleep. // Similarly, any vampire can eat any other sleeping vampire, and this process repeats. // Assume that the vampires are very smart and would ALWAYS choose to stay alive than to eat the man and risk their lives. // Initially, there are 65 vampires and 1 sleeping man. What would happen in the village?
+
+
+If starvation is not an issue the man will not be eaten and because of that no other vampires. If starvation is an issue there will only be one vampire left in the end.
+
+
+Problem
+Two robots land with their parachutes on an infinite one-dimensional number line. They both land on their parachutes. They are allowed only to make use of the following functions.
+
+
+I. moveLeft() // robot moves to left by 1 unit in 1 unit time
+
+II. moveRight() // robot moves to right by 1 unit in 1 unit time
+
+III. noOperation() // robot does not move and takes 1 unit time
+
+IV. onTopOfParachute() // returns true if the robot is standing on top of either of the parachute, else false
+
+V. didWeMeet() // returns true if the robot meets to the other robot, else false
+
+
+
+Write a function in order to make the robots meet each other. Robots will be executing the same copy of this function.
+
+
+/*
+function meetRobots(counter = 1 ){
+    if(didWeMeet()){
+        return True
+    }
+    else{
+        for(var = 0; i < counter; i++){
+            moveLeft()
+        }
+        for(var = 0; i < counter; i++){
+            if(!onTopOfParachute()){
+                moveRight()
+            }
+        }
+    }
+    return meetRobots(counter++)
+}
+*/
